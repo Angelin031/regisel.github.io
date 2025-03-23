@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 420px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+	.radio-group label {
+    	    white-space: nowrap;
+	}
+
+        button {
+            width: 100%;
+            background: black;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registrasi Akun</h1>
+        <form>
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+            
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+            
+            <label>Jenis Kelamin</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Laki-Laki" required> Laki-Laki</label>
+                <label><input type="radio" name="gender" value="Perempuan" required> Perempuan</label>
+            </div>
+            
+            <label for="agama">Agama</label>
+            <select id="agama" name="agama" required>
+                <option value="Islam">Islam</option>
+                <option value="Kristen">Kristen</option>
+                <option value="Hindu">Hindu</option>
+                <option value="Buddha">Buddha</option>
+                <option value="Konghucu">Konghucu</option>
+            </select>
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+            
+            <label for="confirm_password">Konfirmasi Password</label>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Konfirmasi password" required>
+            
+            <button type="submit">Daftar</button>
+        </form>
+    </div>
+</body>
+</html>
